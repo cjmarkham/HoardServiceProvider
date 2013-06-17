@@ -1,4 +1,4 @@
-HoardCacheServiceProvider
+HoardServiceProvider
 =======================
 
 A Silex service provider for hoard
@@ -12,28 +12,27 @@ In composer.json add this to your dependencies
 
 Then to register
 
-	$app->register(new Hoard\HoardCacheServiceProvider());
+	$app->register(new Hoard\HoardServiceProvider());
 
 Options
 -------
 
-* ```cache_dir``` - The path to the output directory
+* ```apikey``` - The hoard user api key
+* ```server``` - The server your hoard setup resides on
+* ```server``` - The name of the bucket you wish to use 
 
 Usage
 -----
 
-	$app->register(new Hoard\HoardCacheServiceProvider(), array(
-	    'diskcache.cache_dir' => dirname(dirname(__FILE__)) . '/cache'
+	$app->register(new Hoard\HoarderviceProvider(), array(
+	    'hoard.apikey' => 'my-api-key',
+	    'hoard.server' => 'mongodb://127.0.0.1/hoard',
+	    'hoard.bucket' => 'my-bucket-id',
 	));
 
-	$app['diskcache']->set('foo', 'bar');
-	$app['diskcache']->get('foo');
-	$app['diskcache']->delete('foo');
+	$app['hoard']->track('test', array(
+		'foo' => 'bar'
+	));
 
-Groups
-------
-
-Groups can be defined using a period (.).
-
-	$app['diskcache']->set('groupname.foo');
-	$app['diskcache']->delete_group('groupname');
+For more information about Hoard [check the repo][1]
+[1]: https://github.com/marcqualie/hoard
