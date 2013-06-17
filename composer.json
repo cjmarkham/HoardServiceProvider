@@ -15,8 +15,7 @@
     },
     "require": {
         "silex/silex": "~1.0",
-        "marcqualie/hoard": "dev-master",
-        "phpunit/phpunit": "~3.7"
+        "marcqualie/hoard": "dev-master"
     },
     "version" : "0.0.1"
 }
