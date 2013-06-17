@@ -8,7 +8,7 @@ Registering
 
 In composer.json add this to your dependencies
 
-	"cjmarkham/hoard": "dev-master"
+	"cjmarkham/hoard-service": "dev-master"
 
 Then to register
 
