@@ -1,0 +1,22 @@
+{
+    "name": "cjmarkham/hoard-service",
+    "description": "A Silex service provider for hoard",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carl Markham",
+            "email": "carl@cjmarkham.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-0": { 
+        	"Hoard": "src" 
+        }
+    },
+    "require": {
+        "silex/silex": "~1.0",
+        "marcqualie/hoard": "dev-master",
+        "phpunit/phpunit": "~3.7"
+    },
+    "version" : "0.0.1"
+}
